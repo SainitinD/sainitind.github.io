@@ -27,13 +27,16 @@
                 <p class="primary-color normal-bold-text">Atlanta, Georgia</p>
             </div>
         </div>
-
+        <div class="scroll-anim">
+            <Scrolldown />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import moment from 'moment-timezone';
 import { ref } from 'vue';
+import Scrolldown from '../utilities/Scrolldown.vue';
 
 const isPronounciationActive = ref<boolean>(false);
 
@@ -46,7 +49,7 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 <style scoped>
 .name {
     box-sizing: border-box;
-    font-size: 12em;
+    font-size: 12rem;
     line-height: normal;
     border: 0;
 }
@@ -84,6 +87,7 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 .lastname > .name {
     position: relative;
     top: 3rem;
+    font-size: 15rem;
 }
 
 .show {
@@ -126,7 +130,7 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 .contact-me-email:hover {
     text-decoration: underline;
     color: #dc7d00;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -135,10 +139,16 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
     justify-content: space-between;
 }
 
+.scroll-anim {
+    position: absolute;
+    bottom: 0px;
+    left: 48vw;
+}
+
 @keyframes showPronounciation {
     0% {
         opacity: 0%;
-        transform: translateY(1.5rem);
+        transform: translateY(-1.5rem);
     }
 
     100% {
@@ -156,7 +166,7 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 
     100% {
         opacity: 0%;
-        transform: translateY(1.5rem);
+        transform: translateY(-1.5rem);
         visibility: hidden;
     }
 }

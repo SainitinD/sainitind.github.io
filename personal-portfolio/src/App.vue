@@ -1,11 +1,13 @@
 <template>
   <NavBar />
   <About />
+  <Projects />
 </template>
 
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
 import About from './components/views/About.vue';
+import Projects from './components/views/Projects.vue';
 </script>
 
 <style>
