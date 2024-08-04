@@ -1,36 +1,35 @@
 <template>
     <div id="desktop-nav">
-        <div id="logo">Sainitin Daverpally</div>
-        <div class="nav-links">
-            <button><a href="#about">About</a></button>
-            <button><a href="#projects">Projects</a></button>
-            <button><a href="#work">Work Experience</a></button>
-            <button><a href="#recommendations">Skills</a></button>
-            <button><a href="#contact">Contact</a></button>
-        </div>
+        <a href="#home">Home</a>
+        <p>*</p>
+        <a href="#projects">Projects</a>
+        <p>*</p>
+        <a href="#work">Work</a>
+        <p>*</p>
+        <a href="#skills">Skills</a>
+        <p>*</p>
+        <a href="/resume">Resume</a>
+        <p>*</p>
+        <a href="#contact">Contact</a>
     </div>
 </template>
 
 <style scoped>
 #desktop-nav {
-    display: flex;
-    justify-content: space-between;
     margin: 0 2rem;
     margin-top: 1rem;
-}
-
-.nav-links {
     display: flex;
     gap: 1rem;
-    margin: 0;
-    padding: 0;
+    position: fixed;
+    right: 0;
+    margin-right: 24px;
 }
-
+/* 
 #logo {
   font-size: 2rem;
 }
 
 #logo:hover {
   cursor: default;
-}
+} */
 </style>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "moment-timezone": "^0.5.45",
     "vue": "^3.4.31"
   },
   "devDependencies": {
