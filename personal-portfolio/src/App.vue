@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/views/NavBar.vue';
 import About from './components/views/About.vue';
 import Projects from './components/views/Projects.vue';
 </script>
@@ -30,9 +30,9 @@ import Projects from './components/views/Projects.vue';
 
 .section {
   /* padding-top: 4vh; */
-  height: 96vh;
+  height: 100vh;
   width:100%;
-  padding: 4vh 24px 0px;
+  padding: 0vh 24px 2vh; /* top, right/left, bottom */
 }
 
 .light-section {
@@ -42,6 +42,7 @@ import Projects from './components/views/Projects.vue';
 .normal-bold-text {
     font-family: "PP Neue Montreal Medium", "PP Neue Montreal Medium Placeholder", sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .italic-text {

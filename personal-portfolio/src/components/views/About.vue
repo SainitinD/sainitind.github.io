@@ -79,14 +79,14 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 
 .firstname > .pronounciation {
     position: absolute;
-    bottom: 1rem;
+    bottom: 4rem;
     left: 0.5rem;
     cursor: default;
 }
 
 .lastname > .name {
     position: relative;
-    top: 3rem;
+    top: 2rem;
     font-size: 15rem;
 }
 
@@ -141,8 +141,11 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 
 .scroll-anim {
     position: absolute;
-    bottom: 0px;
+    bottom: 1.2rem;
     left: 48vw;
+    animation-name: showPronounciation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes showPronounciation {

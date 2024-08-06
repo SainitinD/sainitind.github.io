@@ -1,8 +1,7 @@
-import { ProjectCategory } from "./enums/project-category";
+import { ProjectCategory } from "./ProjectCategory";
 
 export interface Project {
     title: string;
-    category?: string | null;
-    categoryNumber?: ProjectCategory | null;
+    category: ProjectCategory;
     imgSrc?: string | null;
 }
