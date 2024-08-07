@@ -10,6 +10,10 @@ export class ProjectService implements NamedService{
 
     private _projects = ref<Project[]>([]);
     private _categories = ref<ProjectCategory[]>([]);
+    private _selectedCategory = ref<ProjectCategory>({
+        id: 0,
+        title: "All"
+    });
 
     // default constructor
     constructor() {
@@ -33,6 +37,14 @@ export class ProjectService implements NamedService{
         this._categories.value = categories;
     }
 
+    public get selectedCategory(): ProjectCategory {
+        return this._selectedCategory.value;
+    }
+
+    public set selectedCategory(selectedCategory : ProjectCategory) {
+        this._selectedCategory.value = selectedCategory;
+    } 
+
     public getProjects() : void {
         this.projects = projectsData as Project[];
         console.log(this.projects.length);
@@ -48,11 +60,9 @@ export class ProjectService implements NamedService{
     }
 
     public getUniqueCategories() : ProjectCategory[] {
-        //let res = this.categories.filter((value, index, array) => array.indexOf(value) === index);
-
         const uniqueCategories = [...new Map(this.categories.map(category => [category['id'], category])).values()];
-        console.log(uniqueCategories);
-        console.log(this.categories);
+        // console.log(uniqueCategories);
+        // console.log(this.categories);
         return uniqueCategories;
     }
 
@@ -67,5 +77,10 @@ export class ProjectService implements NamedService{
         return this.projects.filter(p => p.category.id == categoryId).length;
     }
 
-
+    public filteredProjects() : Project[] {
+        if (this.selectedCategory.id == 0) {
+            return this.projects;
+        }
+        return this.projects.filter(p => p.category.id == this.selectedCategory.id);
+    }
 }

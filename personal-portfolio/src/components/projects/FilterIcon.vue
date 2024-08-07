@@ -1,32 +1,52 @@
 <template>
     <div class="filter-icon">
-        <div class="filter-content" @mouseover="isHover = true" @mouseleave="isHover = false">
-            <p class="filter-text" :class="{'primary-color': !isHover}">{{ filterTitle }}</p>
-            <p class="filter-count" :class="{'secondary-color': !isHover}">{{ filterCount }}</p>
+        <div class="filter-content" @mouseover="isHover = true" @mouseleave="isHover = false"  @click="onClick">
+            <p class="filter-text" :class="{'primary-color': !isSelected(), 'selected-category': isSelected()}">{{ filterTitle }}</p>
+            <p class="filter-count" :class="{'secondary-color': !isSelected(), 'selected-category': isSelected()}">{{ filterCount }}</p>
         </div>
         <p class="filter-divider">&ensp;&ensp;&ensp;/&ensp;</p>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { injectService } from '../../services';
-import { ServiceNames } from '../../services/service-names';
+import { ref } from 'vue';
 
-defineProps({
+// import { computed, ref } from 'vue';
+import { injectService } from '../../services';
+import { ServiceNames } from '../../services/utils/service-names';
+
+const props = defineProps({
   filterTitle: String,
   filterCount: Number,
-  index: Number
+  id: Number,
 });
 
- const isHover = ref<boolean>(false);
-
+const isHover = ref<boolean>(false);
 const projectService = injectService(ServiceNames.ProjectService);
 
-const lastIndex = computed(() => projectService.projects.length - 1);
+const onClick = () => {
+    if (projectService.selectedCategory.id == props.id) return;
+    projectService.selectedCategory = projectService.categories.find(pc => pc.id == props.id) ?? projectService.selectedCategory;
+}
+
+const isSelected = () => {
+    if (projectService.selectedCategory.id == props.id || isHover.value == true) {
+        return true;
+    }
+    return false;
+}
+
+// TODO: make the last filter '/' disappear
+// const lastIndex = computed(() => projectService.projects.length - 1);
 </script> 
 
 <style scoped>
+.selected-category {
+    transition: 0.2s ease-in-out;
+    color: orange;
+    cursor: pointer;
+}
+
 .filter-icon {
     position: relative;
     width: max-content;
@@ -36,12 +56,6 @@ const lastIndex = computed(() => projectService.projects.length - 1);
 
 .filter-content {
     display: inline;
-    cursor: pointer;
-}
-
-.filter-content:hover {
-    transition: 0.2s ease-in-out;
-    color: orange;
     cursor: pointer;
 }
 

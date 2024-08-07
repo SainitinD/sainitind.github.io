@@ -2,7 +2,7 @@
     {
         "title": "Algorithm Visualizer",
         "category": {
-            "id": "1",
+            "id": 1,
             "title": "Web Development"
         },
         "imgSrc": "Algorithm-visualizer-demo.png"
@@ -10,7 +10,7 @@
     {
         "title": "Buzzy",
         "category": {
-            "id": "2",
+            "id": 2,
             "title": "Fun"
         },
         "imgSrc": "Buzzy.png"
@@ -18,7 +18,7 @@
     {
         "title": "Moving Terrain",
         "category": {
-            "id": "3",
+            "id": 3,
             "title": "Graphics"
         },
         "imgSrc": "Moving-terrain.png"
@@ -26,7 +26,7 @@
     {
         "title": "Supa File Tree",
         "category": {
-            "id": "2",
+            "id": 2,
             "title": "Fun"
         },
         "imgSrc": "SupaFileTree.png"

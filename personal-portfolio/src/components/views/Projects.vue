@@ -2,19 +2,20 @@
     <div id="projects" class="section">
         <div class="title">
             <p class="secondary-color section-subtitle">Check out my</p>
-            <p class="primary-color normal-bold-text section-title">Projects</p>
+            <p class="primary-color section-title normal-bold-text">Projects</p>
         </div>
         <div class="projects-body">
             <div class="filter">
                 <p class="secondary-color filter-by">Filter By:&emsp;</p>
-                <filter-icon v-for="category, index in projectService.getUniqueCategories()"
+                <filter-icon v-for="category in projectService.getUniqueCategories()"
                              :key="category.id"
                              :filter-title="category.title"
                              :filter-count="projectService.getCategoryCount(category.id)"
-                             :index = "index" />
+                             :id = "category.id"
+                             />
             </div>
             <div class="cards">
-                <thumbnail-card v-for="project, index in projectService.projects"
+                <thumbnail-card v-for="project, index in projectService.filteredProjects()"
                                 :key="index"
                                 :img-src="imgSrcUrl(project.imgSrc)"
                                 :title="project.title"
@@ -24,9 +25,9 @@
     </div>
 </template>
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import { injectService } from '../../services';
-import { ServiceNames } from '../../services/service-names';
+import { ServiceNames } from '../../services/utils/service-names';
 import FilterIcon from '../projects/FilterIcon.vue';
 import ThumbnailCard from '../projects/ThumbnailCard.vue';
 

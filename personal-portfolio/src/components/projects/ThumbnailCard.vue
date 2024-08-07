@@ -20,7 +20,7 @@ defineProps({
 
 <style scoped>
 .card {
-    background-color: #3B1F3C;
+    background-color: #8E6FFB;
     border-radius: 5%;
     padding: 0;
     overflow: hidden;

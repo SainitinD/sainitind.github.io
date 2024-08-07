@@ -1,7 +1,7 @@
 import { inject } from "vue";
-import { Lazy } from "./lazy";
+import { Lazy } from "./utils/lazy";
 import { ProjectService } from "./project-service";
-import { ServiceNames } from "./service-names";
+import { ServiceNames } from "./utils/service-names";
 
 export interface ServiceProvider {
     projectService: ProjectService;
