@@ -73,6 +73,10 @@ button {
   transition: 0.3s ease-in-out;
 }
 
+.primary-color {
+  color: #6e06f2;
+}
+
 /* 
 .light-section {
   background-color: #32343e;

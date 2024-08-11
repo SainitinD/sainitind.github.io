@@ -5,5 +5,5 @@
   "imgSrc": "profile-pic.jpeg",
   "jobTitle": "ML & AI Engineer",
   "jobTitleEmphasis": "ML & AI",
-  "jobTitleContinued": "Engineer"
+  "jobTitleNonEmphasis": "Engineer"
 }

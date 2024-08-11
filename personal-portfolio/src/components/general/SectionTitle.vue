@@ -1,29 +1,18 @@
 <template>
-    <div class="title">
-        <p class="secondary-color section-subtitle">{{ subtitle }}</p>
-        <p class="primary-color section-title normal-bold-text">{{ title }}</p>
-    </div>
+  <h1 class="secondary-color section-subtitle">
+    {{ title }}<span style="color: #6e06f2">.</span>
+  </h1>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  subtitle: String,
   title: String,
 });
 </script>
 
-<style>
-.title {
-    line-height: 1;
-    text-align: center;
-}
-
-.section-subtitle {
-    font-size: 2rem;
-    margin-left: 0.5rem;
-}
-
-.section-title {
-    font-size: 8rem;
+<style scoped>
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
 }
 </style>

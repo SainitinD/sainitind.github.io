@@ -46,14 +46,13 @@ function init(): void {
 
 <style scoped>
 #projects {
-  background-color: #000000;
   height: max-content;
-  padding: 0rem 9rem;
-  padding-top: 4vh;
+  /* padding: 0rem 9rem;
+  padding-top: 4vh; */
 }
 
 .filter {
-  margin: 4rem 0rem;
+  margin: 1.5rem 0rem;
   cursor: default;
 }
 
@@ -71,7 +70,7 @@ function init(): void {
     flex: 1 1 800px;
 } */
 
-.projects-body {
+/* .projects-body {
   padding-left: 0.75rem;
-}
+} */
 </style>
