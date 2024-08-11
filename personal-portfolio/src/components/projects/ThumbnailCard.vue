@@ -27,8 +27,9 @@ defineProps({
     height: max-content;
     width: min-content;
     margin-bottom: 10vh;
-    /* flex: 35%; */
-    /* margin-right: 2rem; */
+    animation-name: zoomOut;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
 }
 
 .thumbnail {
@@ -48,5 +49,17 @@ defineProps({
 }
 .category {
     font-size: 0.8rem;
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 0%;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: scale(1.0);
+    }
 }
 </style>

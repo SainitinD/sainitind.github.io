@@ -9,10 +9,6 @@ export interface ServiceProvider {
 
 const serviceProvider : Partial<ServiceProvider> = {};
 
-// const registerService = <T extends keyof ServiceProvider>(key: T, factory: (sp: ServiceProvider) => ServiceProvider[T]) => {
-
-// }
-
 function registerService<T extends keyof ServiceProvider>(key: T, factory: (sp: ServiceProvider) => ServiceProvider[T]) {
     const lazyService = new Lazy<ServiceProvider[T]>(() => factory(serviceProvider as ServiceProvider));
 

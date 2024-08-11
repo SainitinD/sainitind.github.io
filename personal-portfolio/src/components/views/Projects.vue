@@ -1,9 +1,6 @@
 <template>
     <div id="projects" class="section">
-        <div class="title">
-            <p class="secondary-color section-subtitle">Check out my</p>
-            <p class="primary-color section-title normal-bold-text">Projects</p>
-        </div>
+        <section-title title="Projects" subtitle="Check out my"/>
         <div class="projects-body">
             <div class="filter">
                 <p class="secondary-color filter-by">Filter By:&emsp;</p>
@@ -30,6 +27,7 @@ import { injectService } from '../../services';
 import { ServiceNames } from '../../services/utils/service-names';
 import FilterIcon from '../projects/FilterIcon.vue';
 import ThumbnailCard from '../projects/ThumbnailCard.vue';
+import SectionTitle from "../general/SectionTitle.vue";
 
 const projectService = injectService(ServiceNames.ProjectService);
 
@@ -50,20 +48,6 @@ const imgSrcUrl = (imgSrc : string | null | undefined) => "./src/assets/images/p
     height: max-content;
     padding: 0rem 9rem;
     padding-top: 4vh;
-}
-
-.title {
-    line-height: 1;
-    text-align: center;
-}
-
-.title > .section-subtitle {
-    font-size: 2rem;
-    margin-left: 0.5rem;
-}
-
-.title > .section-title {
-    font-size: 8rem;
 }
 
 .filter {

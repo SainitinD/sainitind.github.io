@@ -69,7 +69,6 @@ const isSelected = () => {
 
 p {
     display: inline;
-    cursor: pointer;
 }
 /* 
 p:hover {

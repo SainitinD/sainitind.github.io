@@ -15,4 +15,6 @@
       "@data/*": ["src/assets/data/*"],
     }
   },
+  "noImplicitAny": false,
+  "allowJs": true,
 }

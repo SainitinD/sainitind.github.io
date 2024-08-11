@@ -1,13 +1,15 @@
 <template>
   <NavBar />
-  <About />
+  <Home />
   <Projects />
+  <Work />
 </template>
 
 <script setup lang="ts">
 import NavBar from './components/views/NavBar.vue';
-import About from './components/views/About.vue';
+import Home from './components/views/Home.vue';
 import Projects from './components/views/Projects.vue';
+import Work from './components/views/Work.vue';
 </script>
 
 <style>
@@ -18,6 +20,10 @@ import Projects from './components/views/Projects.vue';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #app {

@@ -25,7 +25,6 @@
 	}
 }
 
-
 @keyframes wheel {
 	to {
 		opacity: 0;

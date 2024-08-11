@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class="section">
+    <div id="home" class="section">
         <div class="title">
             <div class="firstname">
                 <p class="name  normal-bold-text primary-color" @mouseover="isPronounciationActive = true" @mouseleave="isPronounciationActive = false">Sainitin</p>
@@ -27,7 +27,7 @@
                 <p class="primary-color normal-bold-text">Atlanta, Georgia</p>
             </div>
         </div>
-        <div class="scroll-anim">
+        <div class="scroll-anim" @click="scrollDownToProjects()">
             <Scrolldown />
         </div>
     </div>
@@ -44,6 +44,10 @@ const today = Date.now();
 const estTimeZone = "America/New_York";
 const timeFormat= "hh:mm A";
 const time = moment(today).tz(estTimeZone).format(timeFormat);
+
+const scrollDownToProjects = () => {
+    window.location.href = '#projects';
+}
 </script>
 
 <style scoped>
@@ -54,7 +58,7 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
     border: 0;
 }
 
-#about {
+#home {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -137,12 +141,14 @@ const time = moment(today).tz(estTimeZone).format(timeFormat);
 .about-footer {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
 .scroll-anim {
     position: absolute;
-    bottom: 1.2rem;
+    bottom: 2rem;
     left: 48vw;
+    cursor: pointer;
     animation-name: showPronounciation;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
