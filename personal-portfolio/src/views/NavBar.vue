@@ -2,7 +2,7 @@
   <div id="desktop-nav">
     <div class="logo">Sainitin.</div>
     <div class="nav-links">
-      <a href="#home">Home</a>
+      <a :style="{ color: '#6e06f2' }" href="#home">Home</a>
       <a href="#projects">Projects</a>
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
@@ -34,6 +34,11 @@ a {
   color: #4e525a;
   text-decoration: inherit;
 }
+
+a:hover {
+  color: #6e06f2;
+}
+
 /* 
 #logo {
   font-size: 2rem;

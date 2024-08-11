@@ -2,13 +2,13 @@
   <div id="home" class="section">
     <div class="section-body">
       <div class="home-details">
-        <div class="name show">Hey, I'm Sainitin 👋🏻</div>
+        <div class="name show">Hey, I'm {{ aboutService.firstname }} 👋🏻</div>
         <div class="current-job-title">
-          <span class="purple">ML & AI</span> Engineer
+          <span class="purple">{{ aboutService.jobTitleEmphasis }}</span>
+          {{ aboutService.jobTitleNonEmphasis }}
         </div>
         <div class="home-body">
-          I'm a machine learning engineer based in Atlanta. I love working with
-          data to figure out new directions for business
+          {{ aboutService.description }}
         </div>
         <div class="home-action-items">
           <button class="primary-btn">Get in Touch</button>
@@ -32,8 +32,12 @@
 <script setup lang="ts">
 // import { ref } from "vue";
 import Scrolldown from "../components/utilities/Scrolldown.vue";
+import { injectService } from "../services";
+import { ServiceNames } from "../services/utils/service-names";
 
 // const isPronounciationActive = ref<boolean>(false);
+
+const aboutService = injectService(ServiceNames.AboutService);
 
 const scrollDownToProjects = () => {
   window.location.href = "#projects";
