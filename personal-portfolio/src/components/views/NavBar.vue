@@ -1,36 +1,31 @@
 <template>
     <div id="desktop-nav">
-      <a href="#home">Home</a>
-      <p>*</p>
-      <a href="#projects">Projects</a>
-      <p>*</p>
-      <a href="#work">Work</a>
-      <p>*</p>
-      <a href="#skills">Skills</a>
-      <p>*</p>
-      <a href="/resume">Resume</a>
-      <p>*</p>
-      <a href="#contact">Contact</a>
+      <div class="logo">Sainitin.</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="/resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="chat">Chat</div>
     </div>
 </template>
 
 <style scoped>
 #desktop-nav {
-  overflow: hidden;
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1;
+  padding: 0.75rem 0rem;
+}
 
-    /* margin: 0 2rem;
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    position: fixed;
-    right: 0;
-    margin-right: 24px; */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.125rem;
 }
 
 a {

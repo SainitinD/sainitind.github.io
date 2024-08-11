@@ -28,6 +28,7 @@ import { ServiceNames } from '../../services/utils/service-names';
 import FilterIcon from '../projects/FilterIcon.vue';
 import ThumbnailCard from '../projects/ThumbnailCard.vue';
 import SectionTitle from "../general/SectionTitle.vue";
+import { imgSrcUrl } from '../../services/utils/helper';
 
 const projectService = injectService(ServiceNames.ProjectService);
 
@@ -38,8 +39,6 @@ function init() : void{
         projectService.getProjects();
     }
 }
-
-const imgSrcUrl = (imgSrc : string | null | undefined) => "./src/assets/images/project-demo/" + imgSrc;
 </script>
 
 <style scoped>

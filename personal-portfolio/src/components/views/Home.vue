@@ -1,30 +1,17 @@
 <template>
     <div id="home" class="section">
-        <div class="title">
-            <div class="firstname">
-                <p class="name  normal-bold-text primary-color" @mouseover="isPronounciationActive = true" @mouseleave="isPronounciationActive = false">Sainitin</p>
-                <p class='pronounciation' :class="{show: isPronounciationActive, hide: !isPronounciationActive}">Pronounced Sigh-knee-tin 😄</p>
+        <div class="section-body">
+            <div class="home-details">
+                <div class="name">Hey, I'm Sainitin 👋🏻</div>
+                <div class="current-job-title"><span class="purple">ML & AI</span> Engineer</div>
+                <div class="home-body">I'm a machine learning engineer based in Atlanta. I love working with data to figure out new directions for business</div>
+                <div class="home-action-items">
+                    <button class="contact">Get in Touch</button>
+                    <button class="projects">Browse Projects</button>
+                </div>
             </div>
-            <div class="lastname">
-                <p class="name italic-text primary-color">Daverpally</p>
-            </div>
-        </div>
-        <div class="about-body">
-            <div class="about-content">
-                <p class="primary-color">I'm a computer science graduate from <strong>Georgia institute of Technology</strong> looking for software engineering. I have done three internships before and have experience in <strong>software development, data engineering, app development</strong>. <br><br>Check out my work or contact me!</p>
-            </div>
-            <div class="contact-me">
-                <p class="contact-me-text primary-color">Let's Chat -></p>
-                <a class="contact-me-email secondary-color" href="mailto:s.daverpally@gmail.com">s.daverpally@gmail.com</a>
-            </div>
-        </div>
-        <div class="about-footer">
-            <div class="time">
-                <p class="primary-color italic-text">EST</p>
-                <p class="primary-color normal-bold-text"> TIME: {{ time }}</p>
-            </div>
-            <div class="location">
-                <p class="primary-color normal-bold-text">Atlanta, Georgia</p>
+            <div class="profile-pic">
+                <img src="https://sainitind.github.io/assets/profile-pic.png" alt="">
             </div>
         </div>
         <div class="scroll-anim" @click="scrollDownToProjects()">
@@ -51,13 +38,51 @@ const scrollDownToProjects = () => {
 </script>
 
 <style scoped>
-.name {
-    box-sizing: border-box;
-    font-size: 12rem;
-    line-height: normal;
-    border: 0;
+.section-body {
+    padding: 3.125rem 0rem;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
 }
 
+.home-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    /* gap: 1rem; */
+    width: 40vw;
+}
+
+.name {
+    font-size: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.current-job-title {
+    font-size: 5.5rem;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+}
+
+.purple {
+    color: #6e06f2;
+}
+
+.home-body {
+    font-size: 1.5rem;
+}
+
+.profile-pic {
+    flex: 1 0 0;
+}
+
+.profile-pic > img {
+    width: 35rem;
+}
+
+
+/* OLD VALS */
+/* 
 #home {
     position: relative;
     display: flex;
@@ -111,7 +136,6 @@ const scrollDownToProjects = () => {
 .about-body {
     display: flex;
     justify-content: space-between;
-    /* margin: 8rem 0rem 0rem; top, right/left, bottom */
 }
 
 .about-content {
@@ -142,7 +166,7 @@ const scrollDownToProjects = () => {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-}
+} */
 
 .scroll-anim {
     position: absolute;
