@@ -3,7 +3,7 @@ import aboutData from "@data/about.json";
 import { About } from "../models/About";
 
 export class AboutService implements NamedService {
-  public static serviceName = "ProjectService";
+  public static serviceName = "AboutService";
   public serviceName = AboutService.serviceName;
 
   constructor() {
