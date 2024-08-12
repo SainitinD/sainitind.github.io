@@ -109,7 +109,7 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
   padding: 5px 15px;
   font-size: 14px;
   margin-bottom: 6px;
-  background-color: #2c3599;
+  background-color: #6E06F2;
   color: white;
 }
 </style>
