@@ -3,6 +3,7 @@
   <Home />
   <Projects />
   <Work />
+  <Skills />
   <Contact />
 </template>
 
@@ -11,6 +12,7 @@ import NavBar from "./views/NavBar.vue";
 import Home from "./views/Home.vue";
 import Projects from "./views/Projects.vue";
 import Work from "./views/Work.vue";
+import Skills from "./views/Skills.vue";
 import Contact from "./views/Contact.vue";
 </script>
 

@@ -5,5 +5,7 @@
   "imgSrc": "profile-pic.jpeg",
   "jobTitle": "Software Engineer",
   "jobTitleEmphasis": "Software",
-  "jobTitleNonEmphasis": "Engineer"
+  "jobTitleNonEmphasis": "Engineer",
+  "skills": ["Python", "Java", "Javascript", "Typescript", "C#", "SQL"],
+  "tech": [""]
 }
