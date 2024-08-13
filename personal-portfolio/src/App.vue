@@ -3,6 +3,7 @@
   <Home />
   <Projects />
   <Work />
+  <Contact />
 </template>
 
 <script setup lang="ts">
@@ -10,6 +11,7 @@ import NavBar from "./views/NavBar.vue";
 import Home from "./views/Home.vue";
 import Projects from "./views/Projects.vue";
 import Work from "./views/Work.vue";
+import Contact from "./views/Contact.vue";
 </script>
 
 <style>
@@ -34,8 +36,10 @@ html {
 
 .section {
   /* padding-top: 4vh; */
-  height: 94vh;
+  /* height: 94vh; */
+  height: max-content;
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 button {

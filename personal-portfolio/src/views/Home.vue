@@ -50,6 +50,7 @@ const scrollDownToProjects = () => {
   flex-direction: column;
   justify-content: center;
   padding-bottom: 5rem;
+  height: 94vh;
 }
 .section-body {
   /* padding: 3.125rem 0rem; */
