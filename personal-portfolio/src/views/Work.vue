@@ -1,6 +1,6 @@
 <template>
   <div class="section" id="work">
-    <section-title title="Work Experience" subtitle="Explore my" />
+    <section-title title="Work Experience"/>
     <div class="work-body">
       <div class="job-history">
         <p
@@ -19,14 +19,7 @@
             {{ workExperience.role }}
             <span class="company">@ {{ workExperience.company }}</span>
           </p>
-          <p class="year">
-            May {{ workExperience.startYear }} -
-            {{
-              workExperience.isCurrentJob
-                ? "PRESENT"
-                : "May " + workExperience.endYear
-            }}
-          </p>
+          <p class="year"> {{ workService.getSelectedJobTimeline()}} </p>
         </div>
         <div class="description">
           <p class="description-detail">

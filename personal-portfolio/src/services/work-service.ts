@@ -32,7 +32,7 @@ export class WorkService implements NamedService {
 
   private import_files() {
     this.workExperiences = jobHistoryData as WorkExperience[];
-    this.workExperiences.sort((wE) => wE.startYear + wE.startMonthNumber);
+    this.workExperiences.sort((wE) => -wE.id);
   }
 
   public getCompanies(): string[] {
@@ -42,5 +42,33 @@ export class WorkService implements NamedService {
 
   public getSelectedWorkExperience(): WorkExperience {
     return this.workExperiences[this.selectedWorkExperienceId];
+  }
+
+  public getSelectedJobTimeline(): string {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const workExperience: WorkExperience = this.getSelectedWorkExperience();
+    let formattedStartDate = `${months[workExperience.startMonthNumber - 1]} ${
+      workExperience.startYear
+    }`;
+    let formattedEndDate = "PRESENT";
+    if (!workExperience.isCurrentJob) {
+      formattedEndDate = `${months[workExperience.endMonthNumber ?? 1 - 1]} ${
+        workExperience.endYear
+      }`;
+    }
+    return `${formattedStartDate} - ${formattedEndDate} `;
   }
 }
