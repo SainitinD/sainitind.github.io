@@ -1,9 +1,9 @@
 {
   "firstname": "Sainitin",
   "lastname": "Daverpally",
-  "description": "I'm a machine learning engineer based in Atlanta. I love working with data to figure out new directions for business",
+  "description": "I'm a Software Engineer based in Atlanta. I love building technology to solve business needs.",
   "imgSrc": "profile-pic.jpeg",
-  "jobTitle": "ML & AI Engineer",
-  "jobTitleEmphasis": "ML & AI",
+  "jobTitle": "Software Engineer",
+  "jobTitleEmphasis": "Software",
   "jobTitleNonEmphasis": "Engineer"
 }
