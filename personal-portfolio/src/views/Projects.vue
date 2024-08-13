@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="section">
-    <section-title title="Projects" subtitle="Check out my" />
+    <section-title title="Projects" />
     <div class="projects-body">
       <div class="filter">
         <p class="secondary-color filter-by">Filter By:&emsp;</p>
@@ -13,13 +13,15 @@
         />
       </div>
       <div class="cards">
-        <thumbnail-card
-          v-for="(project, index) in projectService.filteredProjects()"
-          :key="index"
-          :img-src="imgSrcUrl(project.imgSrc)"
-          :title="project.title"
-          :category="project.category.title"
-        />
+        <transition-group>
+          <thumbnail-card
+            v-for="(project, index) in projectService.filteredProjects()"
+            :key="index"
+            :img-src="imgSrcUrl(project.imgSrc)"
+            :title="project.title"
+            :category="project.category.title"
+          />
+        </transition-group>
       </div>
     </div>
   </div>
@@ -64,6 +66,35 @@ function init(): void {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 3rem;
+}
+
+.v-enter-from {
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.v-enter-active {
+  transition: 0.1s ease-in-out;
+}
+
+.v-enter-to {
+  opacity: 100%;
+  transform: scale(1);
+}
+
+.v-leave-from {
+  opacity: 100%;
+  transform: scale(1);
+}
+
+.v-leave-active {
+  transition: 0.1s ease-in-out;
+}
+
+.v-leave-to {
+  opacity: 0;
+  transform: scale(0.1);
 }
 /* 
 .cards>* {
