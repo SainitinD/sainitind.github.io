@@ -1,4 +1,5 @@
 export interface WorkExperience {
+  id: number;
   role: string;
   company: string;
   startYear: number;
@@ -7,5 +8,5 @@ export interface WorkExperience {
   skills: string[];
   isCurrentJob: boolean;
   endYear?: number | null;
-  endMonth?: number | null;
+  endMonthNumber?: number | null;
 }
