@@ -1,19 +1,9 @@
 <template>
-  <NavBar />
-  <Home />
-  <Projects />
-  <Work />
-  <Skills />
-  <Contact />
+  <MainPage />
 </template>
 
 <script setup lang="ts">
-import NavBar from "./views/NavBar.vue";
-import Home from "./views/Home.vue";
-import Projects from "./views/Projects.vue";
-import Work from "./views/Work.vue";
-import Skills from "./views/Skills.vue";
-import Contact from "./views/Contact.vue";
+import MainPage from "./views/MainPage.vue";
 </script>
 
 <style>
@@ -31,7 +21,7 @@ html {
 }
 
 #app {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   padding: 0 2.5rem;
 }
@@ -41,7 +31,8 @@ html {
   /* height: 94vh; */
   height: max-content;
   width: 100%;
-  padding-bottom: 2rem;
+  max-width: 1300px;
+  /* padding-bottom: 2rem; */
 }
 
 button {
@@ -82,35 +73,4 @@ button {
 .primary-color {
   color: #6e06f2;
 }
-
-/* 
-.light-section {
-  background-color: #32343e;
-}
-
-.normal-bold-text {
-  font-family: "PP Neue Montreal Medium", "PP Neue Montreal Medium Placeholder",
-    sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.italic-text {
-  font-family: "Cormorant", "Cormorant Placeholder", serif;
-  font-style: italic;
-  font-size: 1.2rem;
-}
-
-.primary-color {
-  color: #174727;
-}
-
-.secondary-color {
-  color: #6400b5;
-}
-
-p {
-  margin: 0;
-}
- */
 </style>
