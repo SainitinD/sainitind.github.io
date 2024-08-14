@@ -60,15 +60,20 @@ export class WorkService implements NamedService {
       "Dec",
     ];
     const workExperience: WorkExperience = this.getSelectedWorkExperience();
-    let formattedStartDate = `${months[workExperience.startMonthNumber - 1]} ${
-      workExperience.startYear
-    }`;
-    let formattedEndDate = "PRESENT";
+    let startMonthName = months[workExperience.startMonthNumber - 1];
+    let formattedStartDate = "";
+    
     if (!workExperience.isCurrentJob) {
-      formattedEndDate = `${months[workExperience.endMonthNumber ?? 1 - 1]} ${
-        workExperience.endYear
-      }`;
+      let endMonthName = months[workExperience.endMonthNumber ?? 1 - 1];
+      if (workExperience.startYear == workExperience.endYear) {
+        return `${startMonthName} - ${endMonthName} ${workExperience.startYear}`;
+      }
+
+      formattedStartDate = `${startMonthName} ${workExperience.startYear}`;
+      let formattedEndDate = `${endMonthName} ${workExperience.endYear}`;
+      return `${formattedStartDate} - ${formattedEndDate} `;
     }
-    return `${formattedStartDate} - ${formattedEndDate} `;
+
+    return `${formattedStartDate} - PRESENT`;
   }
 }
