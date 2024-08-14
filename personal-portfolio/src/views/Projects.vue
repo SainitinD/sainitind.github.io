@@ -16,7 +16,7 @@
         <transition-group>
           <thumbnail-card
             v-for="(project, index) in projectService.filteredProjects()"
-            :key="index"
+            :key="projectService.selectedCategory.id"
             :img-src="imgSrcUrl(project.imgSrc)"
             :title="project.title"
             :category="project.category.title"
@@ -70,12 +70,12 @@ function init(): void {
 }
 
 .v-enter-from {
-  opacity: 0;
-  transform: scale(0.1);
+  opacity: 25%;
+  transform: scale(0.7);
 }
 
 .v-enter-active {
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .v-enter-to {
@@ -83,19 +83,19 @@ function init(): void {
   transform: scale(1);
 }
 
-.v-leave-from {
+/* .v-leave-from {
   opacity: 100%;
   transform: scale(1);
 }
 
 .v-leave-active {
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .v-leave-to {
   opacity: 0;
   transform: scale(0.1);
-}
+} */
 /* 
 .cards>* {
     flex: 1 1 800px;

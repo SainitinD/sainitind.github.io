@@ -23,9 +23,9 @@
         />
       </div>
     </div>
-    <div class="scroll-anim" @click="scrollDownToProjects()">
+    <!-- <div class="scroll-anim" @click="scrollDownToProjects()">
       <Scrolldown />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -49,8 +49,8 @@ const scrollDownToProjects = () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 5rem;
-  height: 94vh;
+  /* margin-top: 10rem; */
+  height: 64vh;
 }
 .section-body {
   /* padding: 3.125rem 0rem; */
