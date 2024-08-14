@@ -36,7 +36,7 @@ defineProps({
 }
 
 .thumbnail {
-  width: 39vw;
+  width: 32vw;
 }
 
 .info {
