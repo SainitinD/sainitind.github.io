@@ -1,3 +1,5 @@
+import { PersonalSkill } from "./PersonalSkill";
+
 export interface About {
   firstname: string;
   lastname: string;
@@ -6,4 +8,5 @@ export interface About {
   jobTitleFull: string;
   jobTitleEmphasis: string;
   jobTitleNonEmphasis: string;
+  skills: PersonalSkill[],
 }

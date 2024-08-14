@@ -6,6 +6,22 @@
   "jobTitle": "Software Engineer",
   "jobTitleEmphasis": "Software",
   "jobTitleNonEmphasis": "Engineer",
-  "skills": ["Python", "Java", "Javascript", "Typescript", "C#", "SQL"],
-  "tech": [""]
+  "skills": [
+    {
+      "skillName": "Languages",
+      "skills": ["Python", "Java", "Javascript",  "SQL", "Typescript", "C#", "Html/CSS"]
+    },
+    {
+      "skillName": "Software Development",
+      "skills": ["Asp.net Core", "Docker", "Databricks", "Springboot", "Flutter", "Microservices", "Cloud"]
+    },
+    {
+      "skillName": "Web Applications",
+      "skills": ["REST API", "Full-Stack", "VueJS", "ReactJS"]
+    },
+    {
+      "skillName": "Artificial Intelligence",
+      "skills": ["Numpy", "Pandas", "Matplotlib", "Pytorch", "Deeplearning", "CNNs"]
+    }
+  ]
 }
