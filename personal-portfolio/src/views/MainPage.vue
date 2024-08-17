@@ -1,5 +1,4 @@
 <template>
-    <NavBar />
     <div id="mainpage">
         <Home />
         <Projects />
@@ -7,12 +6,10 @@
         <Skills />
         <Contact />
     </div>
-
 </template>
 
 
 <script setup lang="ts">
-import NavBar from "./NavBar.vue";
 import Home from "./Home.vue";
 import Projects from "./Projects.vue";
 import Work from "./Work.vue";

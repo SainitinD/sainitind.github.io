@@ -3,12 +3,18 @@
     <div id="desktop-nav">
       <div class="logo">SainitinD<span class="purple">.</span></div>
       <div class="nav-links">
-        <a :style="{ color: '#6e06f2' }" href="#home">Home</a>
-        <a href="#projects">Projects</a>
+        <!-- <a :style="{ color: '#6e06f2' }" href="#home">Home</a> -->
+        <RouterLink :to="{ path: '/'}" >Home</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#projects'}">Projects</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#work'}">Work</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#skills'}">Skills</RouterLink>
+        <RouterLink :to="{ path: '/resume'}">Resume</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#contact'}">Contact</RouterLink>
+        <!-- <a href="#projects">Projects</a>
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
         <a href="/resume">Resume</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a> -->
       </div>
       <div class="chat">Let's Chat</div>
     </div>
@@ -62,6 +68,10 @@ a:hover {
 
 .chat {
   font-weight: 400;
+}
+
+router-link-active {
+  color: #6e06f2;
 }
 
 /* 
