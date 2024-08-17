@@ -1,30 +1,20 @@
 <template>
   <div class="margin-overlay">
-    <div class="card" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
+    <div class="card" @mouseenter="isHovered = isHoveredState.HOVERING" @mouseleave="isHovered = isHoveredState.NOTHOVERING">
       <img class="thumbnail" :src="imgSrc" />
       <Transition>
-        <div class="thumbnail-body" :class="{extend: isHovered, shrink: !isHovered}">
+        <div class="thumbnail-body" :class="{extend: isHovered == isHoveredState.HOVERING, shrink: isHovered == isHoveredState.NOTHOVERING}">
           <div class="info">
             <p class="title">{{ title }}</p>
             <p class="category">{{ category }}</p>
           </div>
-          <p class="description">A Web application that allows people to visualize different path finding algorithms. Currently, the algorithms supported are: Dijkstra's, BFS and DFS.</p>
-          <div class="tech-stacks">
-            <p class="tech-stack-item">Typescript</p>
+          <p class="description">{{ description }}</p>
+          <div class="tech-stack">
+            <p class="tech-stack-item" v-for="techStackItem, index in techStack" :key="index">{{ techStackItem }}</p>
           </div>
         </div>
       </Transition>
     </div>
-    <!-- <div v-if="flipCard" class="card flipped" @mouseleave="flipCard = false">
-      <div class="info">
-        <p class="title">{{ title }}</p>
-        <p class="category">{{ category }}</p>
-      </div>
-      <p class="description">A Web application that allows people to visualize different path finding algorithms. Currently, the algorithms supported are: Dijkstra's, BFS and DFS.</p>
-      <div class="tech-stacks">
-        <p class="tech-stack-item">Typescript</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -35,9 +25,17 @@ defineProps({
   imgSrc: String,
   title: String,
   category: String,
+  description: String,
+  techStack: Array<String>,
 });
 
-const isHovered = ref<boolean>(false);
+const isHoveredState = {
+  NOTLOADED: 0,
+  HOVERING: 1,
+  NOTHOVERING: 2
+}
+
+const isHovered = ref<number>(isHoveredState.NOTLOADED);
 </script>
 
 <style scoped>
@@ -111,15 +109,19 @@ const isHovered = ref<boolean>(false);
   font-size: 0.8rem;
 }
 
-.info, .description, .tech-stacks {
+.info, .description, .tech-stack {
   padding-left: 1rem;
+}
+
+.description {
+  padding-right: 1rem;
 }
 
 .info, .description {
   color: white;
 }
 
-.tech-stacks {
+.tech-stack {
   display: flex;
   flex-direction: row;
   gap: 10px;

@@ -20,6 +20,8 @@
             :img-src="imgSrcUrl(project.imgSrc)"
             :title="project.title"
             :category="project.category.title"
+            :description="project.description"
+            :tech-stack="project.techStack"
           />
         </transition-group>
       </div>

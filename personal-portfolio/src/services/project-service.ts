@@ -61,8 +61,6 @@ export class ProjectService implements NamedService{
 
     public getUniqueCategories() : ProjectCategory[] {
         const uniqueCategories = [...new Map(this.categories.map(category => [category['id'], category])).values()];
-        // console.log(uniqueCategories);
-        // console.log(this.categories);
         return uniqueCategories;
     }
 
