@@ -1,7 +1,7 @@
 <template>
-  <div id="nav-styling">
+  <div class="center-content" id="nav-styling">
     <div id="desktop-nav">
-      <div class="logo">SainitinD<span class="purple">.</span></div>
+      <div class="logo" @click="goToHome()">SainitinD<span class="purple">.</span></div>
       <div class="nav-links">
         <!-- <a :style="{ color: '#6e06f2' }" href="#home">Home</a> -->
         <RouterLink :to="{ path: '/'}" >Home</RouterLink>
@@ -21,14 +21,16 @@
   </div>
 </template>
 
+<script setup lang="ts">
+const goToHome = () => window.location.href = "./"
+</script>
+
 <style scoped>
-#nav-styling {
+/* #nav-styling {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* position: sticky;
-  top: 10px; */
-}
+} */
 
 #desktop-nav {
   display: flex;
@@ -42,6 +44,7 @@
 
 .logo {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .logo > span {
