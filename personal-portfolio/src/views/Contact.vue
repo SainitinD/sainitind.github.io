@@ -1,23 +1,25 @@
 <template>
-  <div id="contact" class="section">
-    <section-title
-      title="Let's Connect"
-      subtitle="Made with <3 by Sainitin Daverpally"
-    />
-    <div class="contact-links">
-      <div class="social-media-links">
-        <img
-          src="../assets/images/github.png"
-          alt="Sainitin Daverpally's Github"
-          @click="goToGithub()"
-        />
-        <img
-          src="../assets/images/linkedin.png"
-          alt="Sainitin Daverpally's Linkedin"
-          @click="goToLinkedin()"
-        />
+  <div class="center-content">
+    <div id="contact" class="section">
+      <section-title
+        title="Let's Connect"
+        subtitle="Made with <3 by Sainitin Daverpally"
+      />
+      <div class="contact-links">
+        <div class="social-media-links">
+          <img
+            src="../assets/images/github.png"
+            alt="Sainitin Daverpally's Github"
+            @click="goToGithub()"
+          />
+          <img
+            src="../assets/images/linkedin.png"
+            alt="Sainitin Daverpally's Linkedin"
+            @click="goToLinkedin()"
+          />
+        </div>
+        <p class="copyright">©{{ currentYear }} All Rights Reserved</p>
       </div>
-      <p class="copyright">©{{ currentYear }} All Rights Reserved</p>
     </div>
   </div>
 </template>
@@ -36,8 +38,8 @@ const currentYear = new Date().getFullYear();
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
-  /* padding-bottom: 1rem; */
+  padding-bottom: 1rem;
+  /* padding-top: 8rem; */
 }
 
 .contact-links {

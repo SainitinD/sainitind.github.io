@@ -1,10 +1,12 @@
 <template>
   <NavBar />
   <RouterView />
+  <Contact />
 </template>
 
 <script setup lang="ts">
 import NavBar from "./views/NavBar.vue";
+import Contact from "./views/Contact.vue";
 // import MainPage from "./views/MainPage.vue";
 </script>
 
@@ -26,6 +28,12 @@ html {
   /* width: 100vw; */
   height: 100vh;
   padding: 0 2.5rem;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section {

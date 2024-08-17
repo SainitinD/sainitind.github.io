@@ -1,10 +1,9 @@
 <template>
-    <div id="mainpage">
+    <div class="center-content" id="mainpage">
         <Home />
         <Projects />
         <Work />
         <Skills />
-        <Contact />
     </div>
 </template>
 
@@ -14,14 +13,11 @@ import Home from "./Home.vue";
 import Projects from "./Projects.vue";
 import Work from "./Work.vue";
 import Skills from "./Skills.vue";
-import Contact from "./Contact.vue";
 </script>
 
 <style>
 #mainpage {
-    display: flex;
-    flex-direction: column;
     gap: 8rem;
-    align-items: center;
+    margin-bottom: 8rem;
 }
 </style>
