@@ -11,7 +11,7 @@
           {{ aboutService.description }}
         </div>
         <div class="home-action-items">
-          <button class="primary-btn">Get in Touch</button>
+          <button class="primary-btn" @click="scrollDownToContact()">Get in Touch</button>
           <button class="secondary-btn" @click="scrollDownToProjects()">
             Browse Projects
           </button>
@@ -41,6 +41,10 @@ const aboutService = injectService(ServiceNames.AboutService);
 
 const scrollDownToProjects = () => {
   window.location.href = "#projects";
+};
+
+const scrollDownToContact = () => {
+  window.location.href = "#contact";
 };
 </script>
 
