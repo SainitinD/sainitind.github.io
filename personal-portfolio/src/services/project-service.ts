@@ -47,7 +47,6 @@ export class ProjectService implements NamedService{
 
     public getProjects() : void {
         this.projects = projectsData as Project[];
-        console.log(this.projects.length);
     }
 
     public getCategories() : void {

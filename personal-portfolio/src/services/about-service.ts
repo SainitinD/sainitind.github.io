@@ -46,6 +46,5 @@ export class AboutService implements NamedService {
     this._jobTitleNonEmphasis = about.jobTitleNonEmphasis;
     this._firstname = about.firstname;
     this._personalSkills = about.skills;
-    console.log(this.personalSkills);
   }
 }
