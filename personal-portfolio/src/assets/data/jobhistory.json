@@ -1,6 +1,18 @@
 [
   {
     "id": 0,
+    "role": "App Engineering Intern",
+    "company": "Conserve Innovations",
+    "startYear": 2020,
+    "startMonthNumber": 8,
+    "jobDescription": "Worked on a mobile application where I created a coupon page and coupon service that increased coupon usage by 200%",
+    "skills": ["Dart", "Flutter", "UI/UX", "App Development"],
+    "isCurrentJob": false,
+    "endYear": 2021,
+    "endMonthNumber": 5
+  },
+  {
+    "id": 1,
     "role": "Software Engineer Intern",
     "company": "Onsolve",
     "startYear": 2022,
@@ -12,7 +24,31 @@
     "endMonthNumber": 8
   },
   {
-    "id": 1,
+    "id": 2,
+    "role": "Undergraduate Teaching Assistant",
+    "company": "Georgia Tech",
+    "startYear": 2022,
+    "startMonthNumber": 8,
+    "jobDescription": "Worked as a TA for CS 2110: Computer Organization and Architecture. As part of the role, I taught a bi-weekly lab for 30+ students and helped create homeworks.",
+    "skills": ["Assembly", "C"],
+    "isCurrentJob": false,
+    "endYear": 2022,
+    "endMonthNumber": 12
+  },
+  {
+    "id": 3,
+    "role": "Senior Undergraduate Teaching Assistant",
+    "company": "Georgia Tech",
+    "startYear": 2023,
+    "startMonthNumber": 1,
+    "jobDescription": "Worked as a Senior TA for CS 2110: Computer Organization and Architecture. As part of the role, I managed a team of five members to design eight homeworks with student files, pdfs and autograders.",
+    "skills": ["Assembly", "C", "Python", "Java", "Flask"],
+    "isCurrentJob": false,
+    "endYear": 2023,
+    "endMonthNumber": 5
+  },
+  {
+    "id": 4,
     "role": "Software Engineer Intern",
     "company": "Nike",
     "startYear": 2023,
@@ -24,7 +60,7 @@
     "endMonthNumber": 8
   },
   {
-    "id": 2,
+    "id": 5,
     "role": "Software Engineer Apprentice",
     "company": "Amwins",
     "startYear": 2024,
