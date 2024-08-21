@@ -1,11 +1,11 @@
 <template>
   <div class="section" id="work">
-    <section-title title="Work Experience"/>
+    <section-title title="Work"/>
     <div class="work-body">
       <div class="job-history">
         <p
           class="company-name"
-          :class="{ purple: workService.selectedWorkExperienceId == workExperience.id }"
+          :class="{ selected: workService.selectedWorkExperienceId == workExperience.id }"
           v-for="workExperience in workService.workExperiences"
           :key="workExperience.id"
           @click="workService.selectedWorkExperienceId = workExperience.id"
@@ -32,8 +32,22 @@
       </div>
     </div>
     <div class="work-action-btns">
-      <button v-if="workService.selectedWorkExperienceId < Math.max(...workService.workExperiences.map(wE => wE.id))" class="prev-job secondary-btn" @click="workService.previousJobDetails()"> <- </button>
-      <button v-if="workService.selectedWorkExperienceId > 0" class="next-job primary-btn" @click="workService.nextJobDetails()"> -> </button>
+      <button v-if="workService.selectedWorkExperienceId < Math.max(...workService.workExperiences.map(wE => wE.id))"
+        class="prev-job secondary-btn"
+        @click="workService.previousJobDetails()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button v-if="workService.selectedWorkExperienceId > 0"
+        class="next-job primary-btn"
+        @click="workService.nextJobDetails()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
     </div>
   </div>
 </template>
@@ -88,12 +102,12 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
 }
 
 .company {
-  color: #6e06f2;
+  color: var(--primary-color);
 }
 
-.purple {
-  color: #6e06f2;
-  transition: 0.3s ease-in-out;
+.selected {
+  color: var(--primary-color);
+  transition: var(--animation-timing);
 }
 
 .description {
@@ -112,7 +126,7 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
   padding: 5px 15px;
   font-size: 14px;
   margin-bottom: 6px;
-  background-color: #6E06F2;
+  background-color: var(--primary-color);
   color: white;
   white-space: nowrap;
 }
@@ -122,8 +136,9 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
 }
 
 .work-action-btns > button {
+  display: flex;
   border-radius: 100%;
-  padding: 5px 8px;
+  padding: 5px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
