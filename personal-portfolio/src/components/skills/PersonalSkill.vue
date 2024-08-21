@@ -15,7 +15,7 @@ defineProps({
 .my-skill {
   display: flex;
   width: 15rem;
-  background-color: #6E06F2;
+  background-color: var(--primary-color);
   color: white;
   align-items: center;
   border-radius: 10px;
@@ -26,7 +26,7 @@ defineProps({
 
 .my-skill:hover {
     transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+    transition: var(--animation-timing);
     background: linear-gradient(-45deg, #6E06F2 40%, #9341ff 50%, #6E06F2 60%);
     background-size: 300%;
     background-position-x: 100%;
