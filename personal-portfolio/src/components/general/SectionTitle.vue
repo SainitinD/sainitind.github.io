@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="secondary-color section-subtitle">
+    <h1 class="title">
       {{ title }}<span style="color: #6e06f2">.</span>
     </h1>
-    <h4 v-if="subtitle != null">{{ subtitle }}</h4>
+    <h4 v-if="subtitle != null" class="subtitle">{{ subtitle }}</h4>
   </div>
 </template>
 
@@ -15,12 +15,13 @@ defineProps({
 </script>
 
 <style scoped>
-h1 {
+.title {
   font-size: 4rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
-h4 {
+.subtitle {
   margin-left: 0.2rem;
 }
 
