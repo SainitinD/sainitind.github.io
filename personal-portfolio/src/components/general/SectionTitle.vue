@@ -23,4 +23,8 @@ h1 {
 h4 {
   margin-left: 0.2rem;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  h1 {font-size: 3rem;}
+}
 </style>

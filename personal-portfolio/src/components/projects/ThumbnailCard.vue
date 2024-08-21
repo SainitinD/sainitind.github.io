@@ -45,14 +45,17 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
   padding: 0;
   overflow: hidden;
   height: 28.75rem;
-  width: 32vw;
-  /* margin-bottom: 10vh; */
+  width: 38.4rem;
   border: 3px solid;
   border-color: black;
   cursor: pointer;
-  /* animation-name: zoomOut;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out; */
+}
+
+.thumbnail {
+  height: 21.6rem;
+  width: inherit;
+  object-fit: cover;
+  display: block;
 }
 
 .thumbnail-body {
@@ -61,11 +64,6 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
   gap: 2rem;
   background-color: #6e05f2;
   border-top: 3px solid black;
-  /* background-color: #270155; */
-  /* display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  background-color: none; */
 }
 
 .extend {
@@ -90,13 +88,6 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
     to{bottom:0rem;} 
 }
 
-.thumbnail {
-  height: 21.6rem;
-  width: inherit;
-  object-fit: cover;
-  display: block;
-}
-
 .info {
   text-align: start;
   margin: 1rem 0rem 0rem;
@@ -107,6 +98,7 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
 }
 .category {
   font-size: 0.8rem;
+  opacity: 80%;
 }
 
 .info, .description, .tech-stack {
@@ -137,15 +129,22 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
   font-weight: 500;
 }
 
-@keyframes zoomOut {
-  0% {
-    opacity: 0%;
-    transform: scale(0.1);
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .card{ width: 19.5rem; height: 16.5rem;}
+  .thumbnail { height: 10.94rem;}
+  .extend {bottom: 11rem;}
+  @keyframes extendAnim{
+    from {bottom: 0rem;} 
+    to{bottom:11rem;} 
   }
-
-  100% {
-    opacity: 100%;
-    transform: scale(1);
+  @keyframes shrinkAnim{
+    from {bottom: 11rem;} 
+    to{bottom:0rem;}
   }
+  .title {font-size: 1.1rem;}
+  .category {font-size: 0.75rem;}
+  .description {font-size: 0.85rem;}
+  .tech-stack {overflow-x: scroll;scrollbar-width: none;}
+  .tech-stack-item {padding: 3px 9px; font-size: 10px; white-space: nowrap;}
 }
 </style>

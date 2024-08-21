@@ -59,6 +59,7 @@ const scrollDownToContact = () => {
 .section-body {
   /* padding: 3.125rem 0rem; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -160,5 +161,13 @@ const scrollDownToContact = () => {
     transform: translateY(-1.5rem);
     visibility: hidden;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  #home {height: auto;}
+  .name {font-size: 1.5rem;}
+  .current-job-title {font-size: 4.25rem;}
+  .home-body {font-size: 1.25rem;}
+  .home-action-items {flex-direction: column;}
 }
 </style>

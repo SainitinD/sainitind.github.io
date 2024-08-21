@@ -35,7 +35,6 @@ defineProps({
 }
 
 .my-skill > svg {
-  /* flex: 0.1 0 0; */
   width: 1.75rem;
 }
 
@@ -48,5 +47,11 @@ defineProps({
    to {
       background-position-x: 0%
    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .my-skill {width: 12rem; padding: 0.3rem;}
+  .my-skill > svg {width: 1.3rem;}
+  .my-skill > p {font-size: 0.95rem;}
 }
 </style>
