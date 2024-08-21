@@ -75,7 +75,7 @@ function init(): void {
 }
 
 .v-enter-active {
-  transition: 0.3s ease-in-out;
+  transition: var(--animation-timing);
 }
 
 .v-enter-to {

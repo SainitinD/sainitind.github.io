@@ -1,6 +1,6 @@
 <template>
   <div class="section" id="skills">
-    <section-title title="Skills & Technologies"/>
+    <section-title title="Skills"/>
     <div class="section-body">
       <div class="skills-section" v-for="personalSkill, idx in aboutService.personalSkills" :key="idx">
         <p class="skill-heading">{{personalSkill.skillName}}</p>

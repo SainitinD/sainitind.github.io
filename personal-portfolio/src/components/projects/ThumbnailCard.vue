@@ -125,7 +125,7 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
   font-size: 14px;
   margin-bottom: 6px;
   background-color: white;
-  color: #6E06F2;
+  color: var(--primary-color);
   font-weight: 500;
 }
 

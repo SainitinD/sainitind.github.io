@@ -56,8 +56,6 @@ const isHamburgerMenuChecked = ref<boolean>(false);
   --foreground: #333;
   --background: white;
   --hamburger-margin: 5px;
-  --animation-timing: 200ms ease-in-out;
-  --long-animation-timing: 500ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
   display: flex;
@@ -176,12 +174,12 @@ const isHamburgerMenuChecked = ref<boolean>(false);
 a {
   transition: all 300ms ease;
   font-weight: 500;
-  color: #4e525a;
+  color: var(--secondary-color);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #6e06f2;
+  color: var(--primary-color);
 }
 
 .chat {
@@ -189,7 +187,7 @@ a:hover {
 }
 
 router-link-active {
-  color: #6e06f2;
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 769px){
