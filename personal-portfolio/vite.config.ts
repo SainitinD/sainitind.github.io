@@ -4,11 +4,15 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: true
+  },
   plugins: [vue()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, "./src"),
-      '@data': path.resolve(__dirname, "./src/assets/data")
+      '@data': path.resolve(__dirname, "./src/assets/data"),
+      '@assets': path.resolve(__dirname, "./src/assets")
     }
   }
 })
