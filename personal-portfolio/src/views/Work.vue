@@ -5,12 +5,12 @@
       <div class="job-history">
         <p
           class="company-name"
-          :class="{ purple: workService.selectedWorkExperienceId == index }"
-          v-for="(company, index) in workService.getCompanies()"
-          :key="index"
-          @click="workService.selectedWorkExperienceId = index"
+          :class="{ purple: workService.selectedWorkExperienceId == workExperience.id }"
+          v-for="workExperience in workService.workExperiences"
+          :key="workExperience.id"
+          @click="workService.selectedWorkExperienceId = workExperience.id"
         >
-          {{ company }}
+          {{ workExperience.company }}
         </p>
       </div>
       <div class="job-details">
@@ -31,6 +31,10 @@
         </p>
       </div>
     </div>
+    <div class="work-action-btns">
+      <button v-if="workService.selectedWorkExperienceId < Math.max(...workService.workExperiences.map(wE => wE.id))" class="prev-job secondary-btn" @click="workService.previousJobDetails()"> <- </button>
+      <button v-if="workService.selectedWorkExperienceId > 0" class="next-job primary-btn" @click="workService.nextJobDetails()"> -> </button>
+    </div>
   </div>
 </template>
 
@@ -45,6 +49,11 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
 </script>
 
 <style>
+#work {
+  display: flex;
+  flex-direction: column;
+}
+
 .work-body {
   margin-top: 1rem;
   display: flex;
@@ -94,6 +103,7 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
 .skills {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -104,5 +114,25 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
   margin-bottom: 6px;
   background-color: #6E06F2;
   color: white;
+  white-space: nowrap;
+}
+
+.work-action-btns {
+  display: none;
+}
+
+.work-action-btns > button {
+  border-radius: 100%;
+  padding: 5px 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .job-history {display: none;}
+  .work-body {height: 400px;}
+  .job-title, .company {font-size: 1.1rem;}
+  .year {font-size: 0.8rem;}
+  .description {font-size: 1rem;}
+  .skill {font-size: 14px; padding: 3px 9px;}
+  .work-action-btns {display: flex; justify-content: flex-end;}
 }
 </style>

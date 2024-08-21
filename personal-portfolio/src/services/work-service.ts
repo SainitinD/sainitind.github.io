@@ -9,6 +9,7 @@ export class WorkService implements NamedService {
 
   constructor() {
     this.import_files();
+    this.selectedWorkExperienceId = Math.max(...this.workExperiences.map(wE => wE.id));
   }
 
   private _workExperiences = ref<WorkExperience[]>([]);
@@ -36,12 +37,11 @@ export class WorkService implements NamedService {
   }
 
   public getCompanies(): string[] {
-    console.log(this.workExperiences);
     return this.workExperiences.map((wE) => wE.company);
   }
 
   public getSelectedWorkExperience(): WorkExperience {
-    return this.workExperiences[this.selectedWorkExperienceId];
+    return this.workExperiences.find(wE => wE.id == this.selectedWorkExperienceId) ?? {} as WorkExperience;
   }
 
   public getSelectedJobTimeline(): string {
@@ -64,7 +64,7 @@ export class WorkService implements NamedService {
     let formattedStartDate = "";
     
     if (!workExperience.isCurrentJob) {
-      let endMonthName = months[workExperience.endMonthNumber ?? 1 - 1];
+      let endMonthName = months[(workExperience.endMonthNumber ?? 1) - 1];
       if (workExperience.startYear == workExperience.endYear) {
         return `${startMonthName} - ${endMonthName} ${workExperience.startYear}`;
       }
@@ -75,5 +75,18 @@ export class WorkService implements NamedService {
     }
 
     return `${formattedStartDate} - PRESENT`;
+  }
+
+  public nextJobDetails() {
+    if (this.selectedWorkExperienceId > 0) {
+      this.selectedWorkExperienceId--;
+    }
+  }
+
+  public previousJobDetails() {
+    const maxJobId = Math.max(...this.workExperiences.map(wE => wE.id));
+    if (this.selectedWorkExperienceId < maxJobId) {
+      this.selectedWorkExperienceId++;
+    }
   }
 }
