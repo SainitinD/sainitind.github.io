@@ -15,7 +15,7 @@
       <div class="cards">
         <transition-group>
           <thumbnail-card
-            v-for="(project, index) in projectService.filteredProjects()"
+            v-for="(project) in projectService.filteredProjects()"
             :key="projectService.selectedCategory.id"
             :img-src="imgSrcUrl(project.imgSrc)"
             :title="project.title"
@@ -51,8 +51,6 @@ function init(): void {
 <style scoped>
 #projects {
   height: max-content;
-  /* padding: 0rem 9rem;
-  padding-top: 4vh; */
 }
 
 .filter {
@@ -84,26 +82,4 @@ function init(): void {
   opacity: 100%;
   transform: scale(1);
 }
-
-/* .v-leave-from {
-  opacity: 100%;
-  transform: scale(1);
-}
-
-.v-leave-active {
-  transition: 0.3s ease-in-out;
-}
-
-.v-leave-to {
-  opacity: 0;
-  transform: scale(0.1);
-} */
-/* 
-.cards>* {
-    flex: 1 1 800px;
-} */
-
-/* .projects-body {
-  padding-left: 0.75rem;
-} */
 </style>

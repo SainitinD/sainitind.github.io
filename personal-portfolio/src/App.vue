@@ -7,7 +7,6 @@
 <script setup lang="ts">
 import NavBar from "./views/NavBar.vue";
 import Contact from "./views/Contact.vue";
-// import MainPage from "./views/MainPage.vue";
 </script>
 
 <style>
