@@ -37,6 +37,7 @@ const currentYear = new Date().getFullYear();
 #contact {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 1rem;
   /* padding-top: 8rem; */
@@ -62,5 +63,9 @@ img {
   cursor: pointer;
   height: 3rem;
   width: 3rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .contact-links{row-gap: 2rem; align-items: flex-start;}
 }
 </style>
