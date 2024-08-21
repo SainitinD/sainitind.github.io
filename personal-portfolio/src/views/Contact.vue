@@ -8,6 +8,11 @@
       <div class="contact-links">
         <div class="social-media-links">
           <img
+            src="../assets/images/email.png"
+            alt="Sainitin Daverpally's Email"
+            @click="goToEmail()"
+          />
+          <img
             src="../assets/images/github.png"
             alt="Sainitin Daverpally's Github"
             @click="goToGithub()"
@@ -27,6 +32,7 @@
 <script setup lang="ts">
 import SectionTitle from "../components/general/SectionTitle.vue";
 
+const goToEmail = () => window.open("mailto:s.daverpally@gmail.com");
 const goToGithub = () => window.open("https://github.com/SainitinD");
 const goToLinkedin = () => window.open("https://linkedin.com/in/SainitinD");
 
@@ -40,7 +46,6 @@ const currentYear = new Date().getFullYear();
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 1rem;
-  /* padding-top: 8rem; */
 }
 
 .contact-links {
@@ -48,7 +53,6 @@ const currentYear = new Date().getFullYear();
   gap: 1rem;
   flex-direction: column;
   justify-content: space-between;
-  /* justify-content: center; */
 }
 
 .social-media-links {
@@ -65,7 +69,12 @@ img {
   width: 3rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+img:hover {
+  animation: wiggle;
+  animation-duration: 0.3s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 727px) {
   .contact-links{row-gap: 2rem; align-items: flex-start;}
 }
 </style>
