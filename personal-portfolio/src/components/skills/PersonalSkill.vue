@@ -43,12 +43,6 @@ defineProps({
   font-size: 1.1rem;
 }
 
-@keyframes shimmer {
-   to {
-      background-position-x: 0%
-   }
-}
-
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .my-skill {width: 12rem; padding: 0.3rem;}
   .my-skill > svg {width: 1.3rem;}
