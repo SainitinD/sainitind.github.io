@@ -74,7 +74,7 @@ img:hover {
   animation-duration: 0.3s;
 }
 
-@media screen and (min-width: 320px) and (max-width: 727px) {
+@media screen and (max-width: 727px) {
   .contact-links{row-gap: 2rem; align-items: flex-start;}
 }
 </style>

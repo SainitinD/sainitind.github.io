@@ -15,7 +15,7 @@ import Contact from "./views/Contact.vue";
   padding: var(--app-horizontal-padding);
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #app {padding: 0 1.5rem;}
 }
 </style>

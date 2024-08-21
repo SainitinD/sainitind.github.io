@@ -129,7 +129,7 @@ const isHovered = ref<number>(isHoveredState.NOTLOADED);
   font-weight: 500;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .card{ width: 19.5rem; height: 16.5rem;}
   .thumbnail { height: 10.94rem;}
   .extend {bottom: 11rem;}

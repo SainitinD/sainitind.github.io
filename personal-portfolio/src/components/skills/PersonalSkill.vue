@@ -43,7 +43,7 @@ defineProps({
   font-size: 1.1rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .my-skill {width: 12rem; padding: 0.3rem;}
   .my-skill > svg {width: 1.3rem;}
   .my-skill > p {font-size: 0.95rem;}

@@ -25,7 +25,7 @@ defineProps({
   margin-left: 0.2rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   h1 {font-size: 2rem;}
 }
 </style>

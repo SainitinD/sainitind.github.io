@@ -141,7 +141,7 @@ const workExperience = computed(() => workService.getSelectedWorkExperience());
   padding: 5px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .job-history {display: none;}
   .work-body {height: 400px;}
   .job-title, .company {font-size: 1.1rem;}

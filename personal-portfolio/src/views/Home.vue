@@ -137,7 +137,7 @@ const scrollDownToContact = () => {
   .profile-pic {align-items: center;}
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #home {height: auto; margin-top: 4rem;}
   .home-details {width: 100%;}
   .name {font-size: 1.5rem;}

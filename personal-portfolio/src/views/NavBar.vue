@@ -194,7 +194,7 @@ router-link-active {
   #hamburger-nav{display: none;}
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #desktop-nav {display: none;}
   #hamburger-nav{display: flex;}
 }
