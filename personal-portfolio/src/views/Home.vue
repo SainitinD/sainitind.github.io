@@ -133,7 +133,7 @@ const scrollDownToContact = () => {
   .profile-pic > img {height: 20rem; width: 20rem;}
 }
 
-@media screen and (max-width: 591px) {
+@media screen and (max-width: 574px) {
   .profile-pic {align-items: center;}
 }
 
@@ -154,6 +154,6 @@ const scrollDownToContact = () => {
   .current-job-title {font-size: 4.25rem;}
   .home-body {font-size: 1.25rem;}
   .home-action-items {flex-direction: column;}
-  .profile-pic > img {height: 15rem; width: 15rem;}
+  .profile-pic > img {height: 20rem; width: 20rem;}
 }
 </style>

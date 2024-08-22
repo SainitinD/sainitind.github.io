@@ -39,7 +39,7 @@ const scrollToTop = () => {
 }
 </script>
 
-<style>
+<style scoped>
 #mainpage {
     gap: 8rem;
     margin-bottom: 8rem;
