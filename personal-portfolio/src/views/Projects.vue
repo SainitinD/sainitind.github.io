@@ -22,6 +22,7 @@
             :category="project.category.title"
             :description="project.description"
             :tech-stack="project.techStack"
+            :github-url="project.githubLink"
           />
         </transition-group>
       </div>

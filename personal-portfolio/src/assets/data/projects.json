@@ -7,7 +7,8 @@
         },
         "imgSrc": "Algorithm-visualizer-demo.png",
         "description": "A Web application that allows people to visualize different path finding algorithms. Currently, the algorithms supported are: Dijkstra's, BFS and DFS.",
-        "techStack": ["Javascript", "Html", "Css", "VueJS"]
+        "techStack": ["Javascript", "Html", "Css", "VueJS"],
+        "githubLink": "https://github.com/SainitinD/Algorithm-Visualizer"
     },
     {
         "title": "Buzzy",
@@ -27,7 +28,8 @@
         },
         "imgSrc": "Moving-terrain.png",
         "description": "A web application that procedurally generates a minecraft like terrain, clouds and trees using perlin noise. I love minecraft and wanted to create procedural terrain so this is the result.",
-        "techStack": ["Javascript", "Html", "Css", "P5.js"]
+        "techStack": ["Javascript", "Html", "Css", "P5.js"],
+        "githubLink": "https://github.com/SainitinD/Moving-Terrain"
     },
     {
         "title": "Supa File Tree",
@@ -37,6 +39,7 @@
         },
         "imgSrc": "SupaFileTree.png",
         "description": "A python library that generates a file tree given a specific path as input. I created this because I couldn't find a package that allows people to do it.",
-        "techStack": ["Python"]
+        "techStack": ["Python"],
+        "githubLink": "https://github.com/SainitinD/File-Tree-Generator"
     }
 ]

@@ -1,7 +1,7 @@
 <template>
   <div class="margin-overlay">
-    <div class="card" @mouseenter="isHovered = isHoveredState.HOVERING" @mouseleave="isHovered = isHoveredState.NOTHOVERING">
-      <img class="thumbnail" :src="imgSrc" />
+    <div class="card" @mouseenter="isHovered = isHoveredState.HOVERING" @mouseleave="isHovered = isHoveredState.NOTHOVERING" @click="goToGithubLink(githubUrl)">
+      <img class="thumbnail" :src="imgSrc ? imgSrc : undefined" />
       <Transition>
         <div class="thumbnail-body" :class="{extend: isHovered == isHoveredState.HOVERING, shrink: isHovered == isHoveredState.NOTHOVERING}">
           <div class="info">
@@ -22,11 +22,12 @@
 import { ref } from 'vue';
 
 defineProps({
-  imgSrc: String,
+  imgSrc: String || null,
   title: String,
   category: String,
   description: String,
   techStack: Array<String>,
+  githubUrl : String || undefined,
 });
 
 const isHoveredState = {
@@ -36,6 +37,10 @@ const isHoveredState = {
 }
 
 const isHovered = ref<number>(isHoveredState.NOTLOADED);
+
+const goToGithubLink = (githubLink : string | null | undefined) => {
+  if (githubLink) window.open(githubLink)
+};
 </script>
 
 <style scoped>
