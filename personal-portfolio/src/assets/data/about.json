@@ -1,0 +1,27 @@
+{
+  "firstname": "Sainitin",
+  "lastname": "Daverpally",
+  "description": "I'm a Software Engineer based in Atlanta. I love building technology to solve business needs.",
+  "imgSrc": "profile-pic.jpeg",
+  "jobTitle": "Software Engineer",
+  "jobTitleEmphasis": "Software",
+  "jobTitleNonEmphasis": "Engineer",
+  "skills": [
+    {
+      "skillName": "Languages",
+      "skills": ["Python", "Java", "Javascript",  "SQL", "Typescript", "C#", "Html/CSS"]
+    },
+    {
+      "skillName": "Software Development",
+      "skills": ["Asp.net Core", "Docker", "Databricks", "Springboot", "Flutter", "Microservices", "Cloud"]
+    },
+    {
+      "skillName": "Web Applications",
+      "skills": ["REST API", "Full-Stack", "VueJS", "ReactJS"]
+    },
+    {
+      "skillName": "Artificial Intelligence",
+      "skills": ["Numpy", "Pandas", "Matplotlib", "Pytorch", "Deeplearning", "CNNs"]
+    }
+  ]
+}
