@@ -1,5 +1,5 @@
 import { NamedService } from "./abstract/named-service";
-import aboutData from "@data/about.json";
+import aboutData from '@data/about.json';
 import { About } from "../models/About";
 import { PersonalSkill } from "../models/PersonalSkill";
 

@@ -17,12 +17,12 @@
           <thumbnail-card
             v-for="(project) in projectService.filteredProjects()"
             :key="projectService.selectedCategory.id"
-            :img-src="imgSrcUrl(project.imgSrc)"
+            :img-src="project.imgSrc ?? undefined"
             :title="project.title"
             :category="project.category.title"
             :description="project.description"
             :tech-stack="project.techStack"
-            :github-url="project.githubLink"
+            :github-url="project.githubLink ?? undefined"
           />
         </transition-group>
       </div>
@@ -36,7 +36,6 @@ import { ServiceNames } from "../services/utils/service-names";
 import FilterIcon from "../components/projects/FilterIcon.vue";
 import ThumbnailCard from "../components/projects/ThumbnailCard.vue";
 import SectionTitle from "../components/general/SectionTitle.vue";
-import { imgSrcUrl } from "../services/utils/helper";
 
 const projectService = injectService(ServiceNames.ProjectService);
 

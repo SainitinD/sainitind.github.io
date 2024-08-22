@@ -1,4 +1,4 @@
 const imgSrcUrl = (imgSrc: string | null | undefined) =>
-  "./src/assets/images/project-demo/" + imgSrc;
+  "/project-demo/" + imgSrc;
 
 export { imgSrcUrl };

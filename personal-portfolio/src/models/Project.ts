@@ -6,5 +6,5 @@ export interface Project {
     imgSrc?: string | null;
     description: string;
     techStack: string[];
-    githubLink?: string | null;
+    githubLink?: string | null | undefined;
 }

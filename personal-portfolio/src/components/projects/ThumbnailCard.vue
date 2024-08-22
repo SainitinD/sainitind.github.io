@@ -1,7 +1,7 @@
 <template>
   <div class="margin-overlay">
     <div class="card" @mouseenter="isHovered = isHoveredState.HOVERING" @mouseleave="isHovered = isHoveredState.NOTHOVERING" @click="goToGithubLink(githubUrl)">
-      <img class="thumbnail" :src="imgSrc ? imgSrc : undefined" />
+      <img class="thumbnail" :src="imgSrcUrl(imgSrc)" />
       <Transition>
         <div class="thumbnail-body" :class="{extend: isHovered == isHoveredState.HOVERING, shrink: isHovered == isHoveredState.NOTHOVERING}">
           <div class="info">
@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { imgSrcUrl } from '../../services/utils/helper';
 
 defineProps({
   imgSrc: String || null,
@@ -27,7 +28,7 @@ defineProps({
   category: String,
   description: String,
   techStack: Array<String>,
-  githubUrl : String || undefined,
+  githubUrl : String || null,
 });
 
 const isHoveredState = {

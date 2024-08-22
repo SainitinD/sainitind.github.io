@@ -1,7 +1,7 @@
 import { NamedService } from "./abstract/named-service";
-import jobHistoryData from "@data/jobhistory.json";
 import { ref } from "vue";
 import { WorkExperience } from "../models/WorkExperience";
+import jobHistoryData from '@data/jobhistory.json';
 
 export class WorkService implements NamedService {
   public static serviceName = "WorkService";
