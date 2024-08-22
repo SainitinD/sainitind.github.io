@@ -10,9 +10,8 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, "./src"),
-      '@data': path.resolve(__dirname, "./src/assets/data"),
-      '@assets': path.resolve(__dirname, "./src/assets")
+      '@data': path.resolve(__dirname, 'src/assets/data'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     }
   }
 })

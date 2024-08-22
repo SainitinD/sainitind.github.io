@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/router.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.json", "src/**/*.vue", "src/router.ts", "shims-vue.d.ts", "src/**/*.d.ts", "global.d.ts"]
 }

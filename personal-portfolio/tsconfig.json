@@ -9,10 +9,10 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
       "@data/*": ["src/assets/data/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "noImplicitAny": false,
