@@ -13,14 +13,12 @@
         {{ filterCount }}
       </p>
     </div>
-    <p class="filter-divider">&ensp;&ensp;&ensp;/&ensp;</p>
+    <p v-if="lastIndex !== id" class="filter-divider">&ensp;&ensp;/&ensp;</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
-// import { computed, ref } from 'vue';
+import { computed, ref } from "vue";
 import { injectService } from "../../services";
 import { ServiceNames } from "../../services/utils/service-names";
 
@@ -47,8 +45,7 @@ const filterColor = () => {
   return "#4e525a";
 };
 
-// TODO: make the last filter '/' disappear
-// const lastIndex = computed(() => projectService.projects.length - 1);
+const lastIndex = computed(() => projectService.projects.length - 1);
 </script>
 
 <style scoped>
@@ -71,9 +68,9 @@ const filterColor = () => {
 }
 
 .filter-count {
-  position: absolute;
+  position: relative;
   bottom: 0.3rem;
-  right: 2.25rem;
+  left: 0.2rem;
   font-size: 0.9rem;
 }
 
