@@ -70,5 +70,17 @@
     "isCurrentJob": false,
     "endYear": 2024,
     "endMonthNumber": 8
+  },
+  {
+    "id": 6,
+    "role": "Machine Learning Engineer",
+    "company": "Nike",
+    "startYear": 2024,
+    "startMonthNumber": 9,
+    "jobDescription": "Migrated 3 ETL pipelines from Snowflake to Databricks, converting SQL queries into PySpark workflows using Medallion architecture (Bronze/Silver/Gold) to process 450M+ records, improving maintainability and scalability across regions",
+    "skills": ["Python", "Pyspark", "SQL", "ETL", "Databricks", "Pytest"],
+    "isCurrentJob": false,
+    "endYear": 2026,
+    "endMonthNumber": 4
   }
 ]

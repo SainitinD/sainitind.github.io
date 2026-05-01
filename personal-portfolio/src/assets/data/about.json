@@ -9,19 +9,23 @@
   "skills": [
     {
       "skillName": "Languages",
-      "skills": ["Python", "Java", "Javascript",  "SQL", "Typescript", "C#", "Html/CSS"]
+      "skills": ["Python", "SQL", "Typescript", "C#", "Javascript", "Html/CSS", "Java"]
     },
     {
-      "skillName": "Software Development",
-      "skills": ["Asp.net Core", "Docker", "Databricks", "Springboot", "Flutter", "Microservices", "Cloud"]
+      "skillName": "Data & Backend",
+      "skills": ["Pyspark", "Databricks", "ETL Pipelines", "Pytest", "Asp.net Core", "Docker", "Databricks", "Springboot", "Flutter", "Microservices"]
     },
     {
       "skillName": "Web Applications",
-      "skills": ["REST API", "Full-Stack", "VueJS", "ReactJS"]
+      "skills": ["REST API", "Full-Stack", "VueJS", "ReactJS", "NSubstitute", "Vitest"]
+    },
+    {
+      "skillName": "Cloud & DB",
+      "skills": ["AWS", "Azure (DevOps)", "PostgreSQL", "MySQL"]
     },
     {
       "skillName": "Artificial Intelligence",
-      "skills": ["Numpy", "Pandas", "Matplotlib", "Pytorch", "Deeplearning", "CNNs"]
+      "skills": ["Numpy", "Pandas", "Matplotlib", "Pytorch", "Deeplearning", "CNNs", "Cursor", "Claude", "Copliot"]
     }
   ]
 }
