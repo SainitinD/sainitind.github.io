@@ -1,10 +1,10 @@
 {
   "firstname": "Sainitin",
   "lastname": "Daverpally",
-  "description": "I'm a Software Engineer based in Atlanta. I love building technology to solve business needs.",
+  "description": "I'm a Data / Software Engineer based in Atlanta. I love building technology to solve business needs.",
   "imgSrc": "profile-pic.jpeg",
-  "jobTitle": "Software Engineer",
-  "jobTitleEmphasis": "Software",
+  "jobTitle": "Software",
+  "jobTitleEmphasis": "Data / Software",
   "jobTitleNonEmphasis": "Engineer",
   "skills": [
     {
