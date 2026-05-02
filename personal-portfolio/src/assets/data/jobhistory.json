@@ -61,7 +61,7 @@
   },
   {
     "id": 5,
-    "role": "Software Engineer Apprentice",
+    "role": "Software Engineer Intern",
     "company": "Amwins",
     "startYear": 2024,
     "startMonthNumber": 1,
@@ -73,7 +73,7 @@
   },
   {
     "id": 6,
-    "role": "Machine Learning Engineer",
+    "role": "Data Engineer",
     "company": "Nike",
     "startYear": 2024,
     "startMonthNumber": 9,
