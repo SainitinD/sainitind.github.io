@@ -12,8 +12,8 @@
         </div>
         <div class="home-action-items">
           <button class="primary-btn" @click="scrollDownToContact()">Get in Touch</button>
-          <button class="secondary-btn" @click="scrollDownToProjects()">
-            Browse Projects
+          <button class="secondary-btn" @click="scrollDownToWork()">
+            Browse Work Experience
           </button>
         </div>
       </div>
@@ -37,8 +37,8 @@ import { ServiceNames } from "../services/utils/service-names";
 
 const aboutService = injectService(ServiceNames.AboutService);
 
-const scrollDownToProjects = () => {
-  window.location.href = "#projects";
+const scrollDownToWork = () => {
+  window.location.href = "#work";
 };
 
 const scrollDownToContact = () => {

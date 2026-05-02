@@ -9,8 +9,8 @@
             </button>
          </Transition>
         <Home />
-        <Projects />
         <Work />
+        <Projects />
         <Skills />
     </div>
 </template>

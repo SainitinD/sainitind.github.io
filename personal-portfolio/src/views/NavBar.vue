@@ -5,8 +5,8 @@
         <div class="logo" @click="goToHome()">SainitinD<span class="purple">.</span></div>
         <div class="nav-links">
           <RouterLink :to="{ path: '/'}" >Home</RouterLink>
-          <RouterLink :to="{ path: '/', hash: '#projects'}">Projects</RouterLink>
           <RouterLink :to="{ path: '/', hash: '#work'}">Work</RouterLink>
+          <RouterLink :to="{ path: '/', hash: '#projects'}">Projects</RouterLink>
           <RouterLink :to="{ path: '/', hash: '#skills'}">Skills</RouterLink>
           <RouterLink :to="{ path: '/resume'}">Resume</RouterLink>
         </div>
